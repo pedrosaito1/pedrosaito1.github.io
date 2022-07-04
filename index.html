@@ -5,12 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.0/css/line.css">
     <link rel="stylesheet" href="./assets/styles/reset.css">
     <link rel="stylesheet" href="./assets/styles/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 
     <title>Pedro Saito</title>
 </head>
@@ -19,7 +19,11 @@
         <nav>
             <a href="#" class="logo link">&lsaquo;pedrosaito1/&rsaquo;</a>
 
-            <div class="menu-mobile"><i class="uil uil-apps active"></i></div>
+            <div class="mobile-menu">
+                <i class="uil uil-apps mobile-open"></i>
+                <i class="uil uil-times-square mobile-close"></i>
+            </div>
+            
             
             <ul class="nav-list">
                 <li><a href="#" class="link">Home</a></li>
@@ -29,5 +33,7 @@
             </ul>
         </nav>
     </header>
+
+    <script src="./assets/scripts/mobile-menu.js"></script>
 </body>
 </html>

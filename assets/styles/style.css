@@ -31,7 +31,7 @@ nav {
     align-items: center;
     border-top: .25rem solid var(--primary-color);
     height: 90px;
-    padding: 0 8rem;
+    padding: 0 7.5rem;
 }
 
 nav .logo {
@@ -40,6 +40,10 @@ nav .logo {
     font-weight: 500;
     color: var(--secondary-color);
     transition: 0.7s;
+}
+
+nav .mobile-menu {
+    display: none;
 }
 
 nav .nav-list {
@@ -54,4 +58,68 @@ nav .nav-list {
     font-size: 18px;
     font-weight: 500;
     transition: 0.7s;
+}
+
+@media screen and (max-width: 1100px) {
+    nav {
+        padding: 0 1.25rem;
+    }
+    
+    nav .mobile-menu {
+        display: block;
+    }
+
+    .mobile-menu i.mobile-open,
+    .mobile-menu i.mobile-close {
+        color: var(--secondary-color);
+        font-size: 35px;
+        cursor: pointer;
+        transition: 0.7s;
+    }
+
+    .mobile-menu i.mobile-close {
+        display: none;
+    }
+
+    .mobile-menu.active i.mobile-close {
+        display: block;
+    }
+
+    .mobile-menu.active i.mobile-open {
+        display: none;
+    }
+    
+
+    nav .nav-list {
+        display: none;
+        position: absolute;
+        flex-direction: column;
+        background-color: var(--container-primary-color);
+        padding: 1.0rem;
+        right: 1%;
+        top: 90px;
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.411);
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+    nav .nav-list.active {
+        display: flex;
+        animation: show-menu 1s forwards;
+    }
+
+    nav .nav-list li {
+        text-transform: uppercase;
+        margin-bottom: 10px;
+    }
+}
+
+@keyframes show-menu {
+    from {
+        transform: translate3d(0, -40px, 0);
+        opacity: 0;
+    } to {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
 }
