@@ -1,18 +1,18 @@
 :root {
-    --container-primary-color: #121212;
-    --container-secondary-color: #151515;
+    --primary-color: #121212;
+    --secondary-color: #151515;
 
-    --primary-color: #6610F2;
-    --secondary-color: #3882e4;
+    --purple: hsl(263, 90%, 51%);
+    --white: hsl(0, 0%, 100%);
 }
 
 .link:hover {
-    color: var(--primary-color);
+    color: var(--purple);
 }
 
 a {
     text-decoration: none;
-    color: #FFF;
+    color: var(--white);
 }
 
 ul, li {
@@ -23,14 +23,14 @@ ul, li {
 header {
     width: 100%;
     position: fixed;
-    background-color: var(--container-primary-color);
+    background-color: var(--primary-color);
 }
 
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-top: .25rem solid var(--primary-color);
+    border-top: .25rem solid var(--purple);
     height: 90px;
     padding: 0 7.5rem;
 }
@@ -39,7 +39,7 @@ nav .logo {
     text-transform: uppercase;
     font-size: 24px;
     font-weight: 500;
-    color: var(--secondary-color);
+    color: var(--white);
     transition: 0.7s;
 }
 
@@ -65,10 +65,10 @@ nav .nav-list {
 .banner {
     display: flex;
     align-items: center;
-    background-color: var(--container-secondary-color);
+    background-color: var(--secondary-color);
     max-height: 900px;
     padding: 12rem;
-    color: #FFF;
+    color: var(--white);
 }
 
 .banner-info {
@@ -87,7 +87,7 @@ nav .nav-list {
 }
 
 .banner-info h1 span {
-    color: var(--primary-color);
+    color: var(--purple);
 }
 
 .banner-info h2 {
@@ -117,10 +117,14 @@ nav .nav-list {
 
     .mobile-menu i.mobile-open,
     .mobile-menu i.mobile-close {
-        color: var(--secondary-color);
+        color: var(--white);
         font-size: 35px;
         cursor: pointer;
         transition: 0.7s;
+    }
+
+    .mobile-menu i.mobile-open:hover {
+        color: var(--purple);
     }
 
     .mobile-menu i.mobile-close {
@@ -140,7 +144,7 @@ nav .nav-list {
         display: none;
         position: absolute;
         flex-direction: column;
-        background-color: var(--container-primary-color);
+        background-color: var(--primary-color);
         padding: 1.0rem;
         right: 1%;
         top: 90px;
@@ -161,12 +165,15 @@ nav .nav-list {
 
     .banner {
         flex-direction: column-reverse;
+        justify-content: center;
         padding: 6rem 0;
         text-align: center;
+        height: 750px;
     }
 
     .banner-info {
         margin-top: 25px;
+        width: 100%;
     }
 
     .banner-info small {
@@ -184,16 +191,11 @@ nav .nav-list {
 
 @media screen and (max-width: 610px) {
     .banner {
-        height: 600px;
         justify-content: center;
     }
 
     .banner-image {
         display: none;
-    }
-
-    .banner-info {
-        width: 100%;
     }
 }
 
