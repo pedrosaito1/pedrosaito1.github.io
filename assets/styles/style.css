@@ -245,9 +245,9 @@ nav .nav-list {
     .banner {
         flex-direction: column-reverse;
         justify-content: center;
-        padding: 6rem 0;
+        padding: 8rem 0;
         text-align: center;
-        height: 750px;
+        gap: 30px;
     }
 
     .banner-info {
@@ -287,6 +287,7 @@ nav .nav-list {
 @media screen and (max-width: 610px) {
     .banner {
         justify-content: center;
+        padding: 18rem 0;
     }
 
     .banner-image {
