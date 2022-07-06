@@ -101,6 +101,14 @@ nav .nav-list {
     margin-bottom: 40px;
 }
 
+.banner-info h2::after {
+    position: relative;
+    content: "|";
+    margin-left: 5px;
+    animation: typing 1.2s infinite;
+    color: var(--purple);
+}
+
 .banner-info .social-btns {
     display: flex;
     justify-content: space-evenly;
@@ -132,6 +140,11 @@ nav .nav-list {
 .banner-image img {
     width: 100%;
     margin-left: 40px;
+    transition: 1s;
+}
+
+.banner-image img:hover {
+    transform: scale(1.1);
 }
 
 @media screen and (max-width: 1200px) {
@@ -239,5 +252,13 @@ nav .nav-list {
     } to {
         transform: translate3d(0, 0, 0);
         opacity: 1;
+    }
+}
+
+@keyframes typing {
+    0%, 100% {
+        opacity: 1;
+    } 100% {
+        opacity: 0;
     }
 }
