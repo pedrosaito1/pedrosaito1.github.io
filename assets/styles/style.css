@@ -1,6 +1,7 @@
 :root {
-    --primary-color: #121212;
-    --secondary-color: #151515;
+    --primary-color: rgb(18, 18, 18);
+    --secondary-color: rgb(21, 21, 21);
+    --primary-color-transparent: rgba(18, 18, 18, 0.95);
 
     --purple: hsl(263, 90%, 51%);
     --white: hsl(0, 0%, 100%);
@@ -23,7 +24,8 @@ ul, li {
 header {
     width: 100%;
     position: fixed;
-    background-color: var(--primary-color);
+    background-color: var(--primary-color-transparent);
+    z-index: 999;
 }
 
 nav {
@@ -276,7 +278,7 @@ nav .nav-list {
         gap: 80px;
         text-align: center;
     }
-    
+
     .about img {
         margin: 0;
     }
