@@ -222,6 +222,7 @@ nav .nav-list {
 .projects-card {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     width: 340px;
     height: 520px;
@@ -248,16 +249,22 @@ nav .nav-list {
     padding: 10px 5px;
 }
 
+.project-info .coming {
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 500;
+}
+
 .project-info h3 {
     font-size: 20px;
     color: var(--purple);
-    font-weight: 500;
+    font-weight: 700;
 }
 
 .project-info p {
     margin: 15px 0;
     font-size: 15px;
-    font-weight: 300;
+    font-weight: 500;
 }
 
 .project-info span {
@@ -265,8 +272,9 @@ nav .nav-list {
     color: var(--purple);
 }
 
-.project-info span .icon {
-    font-size: 30px;
+.project-info span .info {
+    font-size: 15px;
+    font-weight: 300;
     color: var(--white);
 }
 
