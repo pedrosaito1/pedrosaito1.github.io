@@ -20,12 +20,25 @@ ul, li {
     list-style: none;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--primary-color-transparent);
+}
+
+main {
+    margin-top: 90px;
+}
+
 /*HEADER*/
 header {
     width: 100%;
     position: fixed;
     background-color: var(--primary-color-transparent);
     z-index: 999;
+    top: 0;
 }
 
 nav {
@@ -66,11 +79,11 @@ nav .nav-list {
 /*BANNER SECTION*/
 .banner {
     display: flex;
+    justify-content: space-around;
     align-items: center;
     background-color: var(--secondary-color);
-    max-height: 900px;
-    padding: 12rem;
-    color: var(--white);
+    padding: 6.5% 15%;
+    min-height: 60vh;
 }
 
 .banner-info {
@@ -78,6 +91,7 @@ nav .nav-list {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    color: var(--white);
 }
 
 .banner-info small {
@@ -136,16 +150,12 @@ nav .nav-list {
 }
 
 .banner-image {
-    width: 40%;
-}
-
-.banner-image img {
-    width: 100%;
+    max-width: 40%;
     margin-left: 40px;
     transition: 1s;
 }
 
-.banner-image img:hover {
+.banner-image:hover {
     transform: scale(1.1);
 }
 
@@ -153,21 +163,21 @@ nav .nav-list {
 
 .about {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
     background-color: var(--primary-color);
-    padding: 6rem 1.25rem;
+    padding: 6.5% 15%;
 }
 
 .about img {
     max-width: 250px;
-    margin-right: 6%;
     border-bottom-right-radius: 5%;
     border-bottom-left-radius: 5%;
     border-top: 6px solid var(--purple);
 }
 
 .about-info {
-    max-width: 750px;
+    width: 65%;
 }
 
 .about-info h2 {
@@ -245,7 +255,7 @@ nav .nav-list {
     .banner {
         flex-direction: column-reverse;
         justify-content: center;
-        padding: 8rem 0;
+        padding: 6.5%;
         text-align: center;
         gap: 30px;
     }
@@ -275,23 +285,27 @@ nav .nav-list {
     .about {
         flex-direction: column;
         align-items: center;
-        gap: 80px;
         text-align: center;
+        gap: 80px;
     }
 
-    .about img {
-        margin: 0;
+    .about-info {
+        width: 100%;
     }
 }
 
 @media screen and (max-width: 610px) {
     .banner {
         justify-content: center;
-        padding: 18rem 0;
+        padding: 50% 0;
     }
 
     .banner-image {
         display: none;
+    }
+
+    .about {
+        padding: 14%;
     }
 }
 
