@@ -2,6 +2,7 @@
     --primary-color: rgb(18, 18, 18);
     --secondary-color: rgb(21, 21, 21);
     --primary-color-transparent: rgba(18, 18, 18, 0.95);
+    --variant-color: rgb(43 42 42);
 
     --purple: hsl(263, 90%, 51%);
     --white: hsl(0, 0%, 100%);
@@ -227,7 +228,7 @@ nav .nav-list {
     width: 340px;
     height: 520px;
     padding: 15px;
-    background-color: var(--primary-color);
+    background-color: var(--variant-color);
     box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
     color: var(--white);
     border-radius: 15px;
@@ -235,7 +236,7 @@ nav .nav-list {
 
 .projects-card img {
     max-width: 100%;
-    min-height: 43%;
+    min-height: 30%;
     border-radius: 12px;
     box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
     transition: 0.3s;
@@ -246,7 +247,7 @@ nav .nav-list {
 }
 
 .project-info {
-    padding: 10px 5px;
+    padding: 10px 5px 0;
 }
 
 .project-info .coming {
@@ -267,15 +268,16 @@ nav .nav-list {
     font-weight: 500;
 }
 
-.project-info span {
+.project-info .tech {
+    display: flex;
+    align-items: center;
+    padding: 5px;
     font-size: 16px;
     color: var(--purple);
 }
 
-.project-info span .info {
-    font-size: 15px;
-    font-weight: 300;
-    color: var(--white);
+.tech .icons {
+    margin-left: 10px;
 }
 
 .project-info .project-btns {
@@ -335,7 +337,6 @@ nav .nav-list {
         display: none;
     }
     
-
     nav .nav-list {
         display: none;
         position: absolute;
