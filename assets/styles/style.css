@@ -427,11 +427,11 @@ nav .nav-list {
     }
 
     .skills {
-        padding: 20% 10%;
+        padding: 20% 0;
     }
 
     .skills h2 {
-        margin: 0 0 60px 0;
+        margin: 0 0 60px;
     }
 
     .wrapper-skills {
