@@ -309,6 +309,24 @@ nav .nav-list {
     text-align: center;
 }
 
+/*FOOTER*/
+
+footer {
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 30px;
+}
+
+footer p {
+    color: var(--purple);
+}
+
+.socials img {
+    margin-right: 10px;
+}
+
 @media screen and (max-width: 1200px) {
     nav {
         padding: 0 1.25rem;
@@ -436,6 +454,15 @@ nav .nav-list {
 
     .wrapper-skills {
         padding: 10px;
+    }
+
+    footer {
+        padding: 1.5 0.5rem;
+        flex-direction: column;
+    }
+
+    footer .socials {
+        margin-bottom: 5px;
     }
 }
 
