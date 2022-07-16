@@ -26,7 +26,7 @@
             
             
             <ul class="nav-list">
-                <li><a href="#" class="link">Home</a></li>
+                <li><a href="#home" class="link">Home</a></li>
                 <li><a href="#about" class="link">Sobre Mim</a></li>
                 <li><a href="#projects" class="link">Projetos</a></li>
                 <li><a href="#skills" class="link">Conhecimentos</a></li>
@@ -37,17 +37,17 @@
     <main>
         <section class="banner" id="home">
             <div class="banner-info">
-                <small>Bem vinda(o), eu sou</small>
-                <h1>Pedro <span>Saito</span>...</h1>
-                <h2 id="typing">Desenvolvedor FrontEnd</h2>
+                <small class="welcome">Bem vinda(o), eu sou</small>
+                <h1 class="title">Pedro <span>Saito</span>...</h1>
+                <h2 id="typing" class="subtitle">Desenvolvedor FrontEnd</h2>
 
                 <div class="social-btns">
-                    <a href="https://www.linkedin.com/in/pedrosaito1/" target="_blank" class="btn-social">
+                    <a href="https://www.linkedin.com/in/pedrosaito1/" target="_blank" class="social-btn link">
                         <i class="uil uil-linkedin icon-button"></i>
                         <span>Linkedin</span>
                     </a>
 
-                    <a href="https://github.com/pedrosaito1" target="_blank" class="btn-social">
+                    <a href="https://github.com/pedrosaito1" target="_blank" class="social-btn link">
                         <i class="uil uil-github icon-button"></i>
                         <span>Github</span>
                     </a>
@@ -58,26 +58,31 @@
         </section>
 
         <section class="about" id="about">
-            <img src="./assets/images/about-image.jpg" alt="Foto pessoal">
+            <img src="./assets/images/about-image.jpg" class="perfil" alt="Foto pessoal">
 
             <div class="about-info">
-                <h2>Sobre mim</h2>
+                <h2 class="subtitle">Sobre mim</h2>
 
-                <p>Me chamo <span>Pedro Saito</span>, sou técnico em Manutenção e Suporte em Informática pelo IFSP  e atualmente estou cursando Análise de Desenvolvimento de Sistemas na CEUNSP. Sempre gostei de ver como as coisas são criadas do zero e por isso venho me dedicando a cada dia para me tornar um desenvolvedor <span>FrontEnd</span> e conseguir minha primeira oportunidade no mercado de trabalho.</p>
+                <p class="description">Me chamo <span>Pedro Saito</span>, sou técnico em Manutenção e Suporte em Informática pelo IFSP  e atualmente estou cursando Análise de Desenvolvimento de Sistemas na CEUNSP. Sempre gostei de ver como as coisas são criadas do zero e por isso venho me dedicando a cada dia para me tornar um desenvolvedor <span>FrontEnd</span> e conseguir minha primeira oportunidade no mercado de trabalho.</p>
+
+                <a href="mailto: contato.pedrosaito@gmail.com" target="_blank" class="btn-email">
+                    <i class="uil uil-envelope icon-button"></i>
+                    <span class="link">contato.pedrosaito@gmail.com</span>
+                </a>
             </div>
         </section>
 
         <section class="projects" id="projects">
-            <h2>Projetos</h2>
+            <h2 class="subtitle">Projetos</h2>
 
             <div class="projects-wrapper">
                 <article class="projects-card">
-                    <img src="./assets/images/todo-list.JPG" alt="Imagem com prévia do projeto">
+                    <img src="./assets/images/todo-list.JPG" class="project-img"alt="Imagem com prévia do projeto">
 
                     <div class="project-info">
-                        <h3>To Do List</h3>
+                        <h3 class="project-title">To Do List</h3>
         
-                        <p>To Do List criada a partir de React TypeScript com objetivo de explorar o framework e entender como o React funciona.</p>
+                        <p class="description">To Do List criada a partir de React TypeScript com objetivo de explorar o framework e entender como o React funciona.</p>
 
                         <span class="tech">
                             Tecnologias usadas: 
@@ -114,7 +119,7 @@
         </section>
 
         <section class="skills" id="skills">
-            <h2>Conhecimentos</h2>
+            <h2 class="subtitle">Conhecimentos</h2>
             <div class="wrapper-skills">
                 <img src="./assets/images/html-128.png" class="icons-skill" alt="HTML icon">
                 <img src="./assets/images/css-128.png" class="icons-skill" alt="CSS icon">
@@ -127,14 +132,24 @@
 
         <footer>
             <div class="socials">
-                <img src="./assets/images/linkedin-32.png" alt="">
-                <img src="./assets/images/gmail-32.png" alt="">
-                <img src="./assets/images/instagram-32.png" alt="">
-                <img src="./assets/images/github-32.png" alt="">
-                <img src="./assets/images/telegram-32.png" alt="">
+                <a href="https://www.linkedin.com/in/pedrosaito1/">
+                    <img src="./assets/images/linkedin-32.png" target="_blank" class="icon-footer" alt="Linkedin Icon">
+                </a>
+                <a href="mailto: contato.pedrosaito@gmail.com">
+                    <img src="./assets/images/gmail-32.png" target="_blank" class="icon-footer"alt="Gmail Icon">
+                </a>
+                <a href="https://www.instagram.com/pedrosaito1/">
+                    <img src="./assets/images/instagram-32.png" target="_blank" class="icon-footer"alt="Instagram Icon">
+                </a>
+                <a href="https://github.com/pedrosaito1">
+                    <img src="./assets/images/github-32.png" target="_blank" class="icon-footer"alt="Github icon">
+                </a>
+                <a href="https://t.me/pedrosaito1">
+                    <img src="./assets/images/telegram-32.png" target="_blank" class="icon-footer"alt="Telegram icon">
+                </a>
             </div>
 
-            <p>Desenvolvido por <a href="#">Pedro Saito &copy;</a></p>
+            <p>Desenvolvido por <a href="https://github.com/pedrosaito1" class="link">Pedro Saito &copy;</a></p>
         </footer>
     </main>
 

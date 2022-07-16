@@ -1,3 +1,5 @@
+@import "./animation.css";
+
 :root {
     --primary-color: rgb(18, 18, 18);
     --secondary-color: rgb(21, 21, 21);
@@ -8,9 +10,23 @@
     --white: hsl(0, 0%, 100%);
 }
 
+/*Scroll bar*/
+
+::-webkit-scrollbar {
+    width: 10px;
+    color: var(--primary-color-transparent);
+    border-top: 0.25rem solid var(--purple);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--purple);
+    border-radius: 5px;
+}
+
 /*Global classes*/
 .link:hover {
     color: var(--purple);
+    transition: 1.2s;
 }
 
 .icon-button {
@@ -21,9 +37,7 @@
 header {
     width: 100%;
     position: fixed;
-    background-color: var(--primary-color-transparent);
     z-index: 999;
-    top: 0;
 }
 
 nav {
@@ -33,6 +47,7 @@ nav {
     border-top: .25rem solid var(--purple);
     height: 90px;
     padding: 0 7.5rem;
+    background-color: var(--primary-color-transparent);
 }
 
 nav .logo {
@@ -61,14 +76,20 @@ nav .nav-list {
     transition: 0.7s;
 }
 
-/*BANNER SECTION*/
+.banner,
+.about,
+.projects,
+.skills {
+    padding: 7% 15%;
+    min-height: 40vh;
+}
+
 .banner {
     display: flex;
     justify-content: space-around;
     align-items: center;
     background-color: var(--secondary-color);
-    padding: 6.5% 15%;
-    min-height: 60vh;
+    min-height: 85vh;
 }
 
 .banner-info {
@@ -79,22 +100,22 @@ nav .nav-list {
     color: var(--white);
 }
 
-.banner-info small {
+.banner-info .welcome {
     font-size: 18px;
     font-weight: 300;
 }
 
-.banner-info h1 {
+.banner-info .title {
     font-size: 55px;
     font-weight: 700;
     text-transform: uppercase;
 }
 
-.banner-info h1 span {
+.banner-info .title span {
     color: var(--purple);
 }
 
-.banner-info h2 {
+.banner-info .subtitle {
     font-size: 26px;
     font-weight: 500;
     letter-spacing: 2px;
@@ -102,7 +123,7 @@ nav .nav-list {
     margin-bottom: 40px;
 }
 
-.banner-info h2::after {
+.banner-info .subtitle::after {
     position: relative;
     content: "|";
     margin-left: 5px;
@@ -115,7 +136,7 @@ nav .nav-list {
     justify-content: space-evenly;
 }
 
-.banner-info .social-btns a {
+.banner-info .social-btns .social-btn {
     display: flex;
     justify-content: space-around;
     padding: 0.5rem 3rem;
@@ -125,7 +146,7 @@ nav .nav-list {
     width: 160px;
 }
 
-.social-btns .btn-social span {
+.social-btns .social-btn span {
     font-size: 20px;
     margin-left: 10px;
 }
@@ -140,17 +161,14 @@ nav .nav-list {
     transform: scale(1.1);
 }
 
-/*ABOUT SECTION*/
-
 .about {
     display: flex;
     justify-content: space-around;
     align-items: center;
     background-color: var(--primary-color);
-    padding: 6.5% 15%;
 }
 
-.about img {
+.about .perfil {
     max-width: 250px;
     border-bottom-right-radius: 5%;
     border-bottom-left-radius: 5%;
@@ -159,9 +177,12 @@ nav .nav-list {
 
 .about-info {
     width: 65%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.about-info h2 {
+.about-info .subtitle {
     color: var(--purple);
     text-transform: uppercase;
     font-size: 30px;
@@ -169,20 +190,33 @@ nav .nav-list {
     margin-bottom: 20px;
 }
 
-.about-info p {
+.about-info .description {
     color: var(--white);
     font-size: 18px;
     font-weight: 300;
     line-height: 2rem;
 }
-/*PROJECTS SECTION*/
+
+.about-info .btn-email {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0.5rem 3rem;
+    border: 2px solid #6518b4;
+    border-radius: 10px;
+    width: 315px;
+    margin-top: 20px;
+}
+
+.about-info .btn-email span {
+    margin-left: 10px;
+}
 
 .projects {
-    padding: 4%;
     background-color: var(--secondary-color);
 }
 
-.projects h2 {
+.projects .subtitle {
     color: var(--purple);
     text-transform: uppercase;
     font-size: 30px;
@@ -204,16 +238,16 @@ nav .nav-list {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 340px;
-    height: 520px;
-    padding: 15px;
+    width: 280px;
+    height: 480px;
+    padding: 15px 10px;
     background-color: var(--variant-color);
     box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
     color: var(--white);
     border-radius: 15px;
 }
 
-.projects-card img {
+.projects-card .project-img {
     max-width: 100%;
     min-height: 30%;
     border-radius: 12px;
@@ -221,7 +255,7 @@ nav .nav-list {
     transition: 0.3s;
 }
 
-.projects-card img:hover {
+.projects-card .project-img:hover {
     transform: scale(1.05);
 }
 
@@ -235,14 +269,14 @@ nav .nav-list {
     font-weight: 500;
 }
 
-.project-info h3 {
-    font-size: 20px;
+.project-info .project-title {
+    font-size: 26px;
     color: var(--purple);
     font-weight: 700;
 }
 
-.project-info p {
-    margin: 15px 0;
+.project-info .description {
+    margin: 8px 0;
     font-size: 15px;
     font-weight: 500;
 }
@@ -250,28 +284,40 @@ nav .nav-list {
 .project-info .tech {
     display: flex;
     align-items: center;
-    padding: 5px;
+    padding: 5px 0;
     font-size: 16px;
     color: var(--purple);
 }
 
-.tech .icons {
-    margin-left: 10px;
+.project-info .tech .icons {
+    display: flex;
+    align-items: center;
+}
+
+.project-info .tech .icons :first-child {
+    margin-left: 2px;
+}
+
+.project-info .tech .icons img {
+    margin-left: 5px;
 }
 
 .project-info .project-btns {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    margin: 20px 0;
+    margin: 15px 0;
 }
 
 .project-btns .btn-link {
-    padding: 10px;
+    display: flex;
+    align-items: center;
+    padding: 3px 10px;
     border: 2px solid var(--purple);
     border-radius: 12px;
-    font-size: 16px;
+    font-size: 12px;
     font-weight: 500;
+    text-transform: uppercase;
 }
 
 .project-btns .btn-link.variant {
@@ -279,16 +325,23 @@ nav .nav-list {
 }
 
 .project-btns .btn-link span {
-    margin-left: 10px;
+    margin-left: 3px;
     color: var(--white);
 }
 
-/*SKILLS SECTION*/
 .skills {
     display: flex;
     flex-direction: column;
     background-color: var(--primary-color);
-    padding: 5% 10%;
+}
+
+.skills .subtitle {
+    color: var(--purple);
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 700;
+    margin: 40px 0;
+    text-align: center;
 }
 
 .wrapper-skills {
@@ -300,16 +353,10 @@ nav .nav-list {
     padding: 70px;
 }
 
-.skills h2 {
-    color: var(--purple);
-    text-transform: uppercase;
-    font-size: 30px;
-    font-weight: 700;
-    margin: 40px 0;
-    text-align: center;
+.wrapper-skills .icons-skill {
+    width: 100px;
+    height: 100px;
 }
-
-/*FOOTER*/
 
 footer {
     padding: 1.5rem;
@@ -321,9 +368,11 @@ footer {
 
 footer p {
     color: var(--purple);
+    font-size: 14px;
+    font-weight: 300;
 }
 
-.socials img {
+footer .socials .icon-footer {
     margin-right: 10px;
 }
 
@@ -383,10 +432,16 @@ footer p {
         margin-bottom: 10px;
     }
 
+    .banner,
+    .about,
+    .projects,
+    .skills {
+        padding: 7%;
+    }
+
     .banner {
         flex-direction: column-reverse;
         justify-content: center;
-        padding: 6.5%;
         text-align: center;
         gap: 30px;
     }
@@ -397,19 +452,7 @@ footer p {
         width: 100%;
     }
 
-    .banner-info small {
-        font-size: 14px;
-    }
-
-    .banner-info h1 {
-        font-size: 40px;
-    }
-
-    .banner-info h2 {
-        font-size: 20px;
-    }
-
-    .banner-image img {
+    .banner-image .banner-image {
         width: 75%;
     }
 
@@ -428,37 +471,73 @@ footer p {
         flex-direction: column;
         align-items: center;
     }
+
+    .wrapper-skills .icons-skill {
+        width: 75px;
+        height: 75px;
+    }
 }
 
 @media screen and (max-width: 610px) {
+    .banner,
+    .about,
+    .projects,
+    .skills {
+        padding: 20% 4%;
+    }
+
     .banner {
         justify-content: center;
-        padding: 50% 0;
+    }
+
+    .banner-info .welcome {
+        margin-bottom: 20px;
+    }
+
+    .banner-info .title {
+        font-size: 35px;
+        margin-bottom: 20px;
+    }
+
+    .banner-info .subtitle {
+        font-size: 20px;
+    }
+
+    .banner-info .social-btns .social-btn{
+        padding: 0.5rem 1.5rem;
+        width: 0;
+    }
+
+    .banner-info .social-btns span {
+        display: none;
     }
 
     .banner-image {
         display: none;
     }
 
-    .about {
-        padding: 14%;
+    .about .about-info .description {
+        font-size: 14px;
     }
 
-    .skills {
-        padding: 20% 0;
+    .about .about-info .btn-email {
+        font-size: 12px;
+        width: 270px;
+        margin-right: 0;
     }
 
     .skills h2 {
         margin: 0 0 60px;
     }
 
-    .wrapper-skills {
+    .skills .wrapper-skills {
         padding: 10px;
     }
 
     footer {
         padding: 1.5 0.5rem;
         flex-direction: column;
+        margin: 0;
     }
 
     footer .socials {
