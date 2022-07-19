@@ -16,6 +16,8 @@ Esse é meu primeiro portfólio com intuito de compartilhar meus projetos.
 - Flexbox
 - Media queries
 - Responsive Web Design
+- Images from [unDraw](https://undraw.co/) and [Flaticons](https://www.flaticon.com/)
+- Icons from [Iconscout](https://iconscout.com/unicons)
 
 ## Author
 
