@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pedro Saito</title>
+    <link rel="shortcut icon" href="/images/logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <nav>
+      <a href="#" style="text-decoration: none">
+        <div class="nav-logo">
+          SAITO<span class="nav-logo-alter">Tech</span>
+        </div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="hero-grid"></div>
+      <div class="hero-glow"></div>
+      <div class="hero-content">
+        <h1>Pedro<span> Saito</span></h1>
+        <div class="hero-role">
+          <span class="role-dot"></span>
+          <span class="role-text" id="roleText"></span>
+        </div>
+        <p class="hero-desc">
+          Transformo dados brutos em infraestrutura confiável. Pipelines
+          escaláveis, arquiteturas modernas e storytelling com dados que geram
+          impacto de negócio real.
+        </p>
+        <div class="hero-ctas">
+          <a href="#projetos" class="btn-primary">Ver Projetos</a>
+          <a href="#contato" class="btn-outline">Entrar em Contato</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <canvas id="constellation"></canvas>
+      </div>
+      <div class="hero-scroll">
+        <div class="scroll-line"></div>
+        Scroll
+      </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section class="about" id="sobre">
+      <div class="section-label">01 — Sobre</div>
+      <h2 class="section-title">Quem sou <strong>eu</strong></h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            Engenheiro de dados com experiência em construir e manter
+            plataformas de dados de ponta a ponta — desde a ingestão até a
+            entrega para times de analytics.
+          </p>
+          <p>
+            Tenho foco em qualidade, observabilidade e escalabilidade. Gosto de
+            resolver problemas complexos de dados com soluções simples e bem
+            documentadas.
+          </p>
+          <div class="about-stats">
+            <div class="stat-card">
+              <span class="stat-num">5+</span>
+              <div class="stat-label">Anos de experiência em dados</div>
+            </div>
+            <div class="stat-card">
+              <span class="stat-num">30+</span>
+              <div class="stat-label">Dashboards entregues</div>
+            </div>
+            <div class="stat-card">
+              <span class="stat-num">3</span>
+              <div class="stat-label">Stacks de cloud</div>
+            </div>
+            <div class="stat-card">
+              <span class="stat-num">15+</span>
+              <div class="stat-label">Outras stacks</div>
+            </div>
+          </div>
+        </div>
+        <div class="about-highlights">
+          <div class="highlight">
+            <div class="highlight-icon">
+              <i class="bi bi-diagram-3 highlight-icon-style"></i>
+            </div>
+            <div>
+              <h4>Engenharia de Pipelines</h4>
+              <p>
+                Desenvolvimento e manutenção de pipelines com Python, SQL e
+                Spark.
+              </p>
+            </div>
+          </div>
+          <div class="highlight">
+            <div class="highlight-icon">
+              <i class="bi bi-stack highlight-icon-style"></i>
+            </div>
+            <div>
+              <h4>Arquiteturas Modernas</h4>
+              <p>
+                Implementação de arquiteturas modernas com camadas Medallion e
+                governança de dados.
+              </p>
+            </div>
+          </div>
+          <div class="highlight">
+            <div class="highlight-icon">
+              <i class="bi bi-bar-chart highlight-icon-style"></i>
+            </div>
+            <div>
+              <h4>Business Intelligence</h4>
+              <p>
+                Desenvolvimento de dashboards para gerar insights valiosos e
+                impacto no negócio.
+              </p>
+            </div>
+          </div>
+          <div class="highlight">
+            <div class="highlight-icon">
+              <i class="bi bi-shield-lock highlight-icon-style"></i>
+            </div>
+            <div>
+              <h4>Segurança</h4>
+              <p>
+                Monitoramento de pipelines, boas práticas de versionamento e
+                controle de qualidade.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="skills" id="skills">
+      <div class="section-label">02 — Tecnologias</div>
+      <h2 class="section-title"><strong>Skills</strong> & Stack</h2>
+      <div class="skills-grid">
+        <div class="skill-group">
+          <div class="skill-group-label">Linguagens</div>
+          <div class="skill-tags">
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">SQL</span>
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">React</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <div class="skill-group-label">Processamento</div>
+          <div class="skill-tags">
+            <span class="skill-tag">Apache Spark</span>
+            <span class="skill-tag">Kafka</span>
+            <span class="skill-tag">dbt</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <div class="skill-group-label">Cloud & Infra</div>
+          <div class="skill-tags">
+            <span class="skill-tag">AWS</span>
+            <span class="skill-tag">GCP</span>
+            <span class="skill-tag">Azure</span>
+            <span class="skill-tag">Databricks</span>
+            <span class="skill-tag">Terraform</span>
+            <span class="skill-tag">Docker</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <div class="skill-group-label">Orquestração</div>
+          <div class="skill-tags">
+            <span class="skill-tag">Airflow</span>
+            <span class="skill-tag">Prefect</span>
+            <span class="skill-tag">Dagster</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <div class="skill-group-label">Storage & DW</div>
+          <div class="skill-tags">
+            <span class="skill-tag">Snowflake</span>
+            <span class="skill-tag">Redshift</span>
+            <span class="skill-tag">Iceberg</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <div class="skill-group-label">Dados & Analytics</div>
+          <div class="skill-tags">
+            <span class="skill-tag">Power BI</span
+            ><span class="skill-tag">Quick Sight</span
+            ><span class="skill-tag">Grafana</span
+            ><span class="skill-tag">Athena</span
+            ><span class="skill-tag">Microsoft Fabric</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJETOS -->
+    <section class="projects" id="projetos">
+      <div class="section-label">03 — Trabalhos</div>
+      <h2 class="section-title">Projetos em <strong>destaque</strong></h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <h2>Em breve</h2>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section class="contact" id="contato">
+      <div class="section-label">04 — Contato</div>
+      <h2 class="section-title">Vamos <strong>conversar</strong></h2>
+      <p class="contact-desc">
+        Aberto a posições como engenheiro de dados pleno. Se tiver uma proposta
+        ou um problema de dados interessante, me chama.
+      </p>
+      <div class="contact-grid">
+        <a href="mailto:contato.pedrosaito@gmail.com" class="contact-card">
+          <span class="contact-card-icon"
+            ><i class="bi bi-envelope-at-fill"></i
+          ></span>
+          <div class="contact-card-body">
+            <div class="contact-card-name">E-mail</div>
+            <div class="contact-card-handle">contato.pedrosaito@gmail.com</div>
+          </div>
+          <span class="contact-card-arrow">→</span>
+        </a>
+        <a
+          href="https://linkedin.com/in/pedrosaito1"
+          class="contact-card"
+          target="_blank"
+        >
+          <span class="contact-card-icon"><i class="bi bi-linkedin"></i></span>
+          <div class="contact-card-body">
+            <div class="contact-card-name">LinkedIn</div>
+            <div class="contact-card-handle">/in/pedrosaito1</div>
+          </div>
+          <span class="contact-card-arrow">→</span>
+        </a>
+        <a
+          href="https://github.com/pedrosaito1"
+          class="contact-card"
+          target="_blank"
+        >
+          <span class="contact-card-icon"><i class="bi bi-github"></i></span>
+          <div class="contact-card-body">
+            <div class="contact-card-name">GitHub</div>
+            <div class="contact-card-handle">@pedrosaito1</div>
+          </div>
+          <span class="contact-card-arrow">→</span>
+        </a>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-left">
+        <span>saitotech</span> — Todos direitos reservados &copy; 2026
+      </div>
+      <div class="footer-right">Feito com café e pipelines ☕</div>
+    </footer>
+  </body>
+
+  <script src="/scripts/script.js"></script>
+</html>
