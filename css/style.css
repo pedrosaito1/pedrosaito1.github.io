@@ -557,6 +557,10 @@ section {
   opacity: 1;
 }
 
+.project-link {
+  text-decoration: none;
+}
+
 .project-number {
   font-family: var(--mono);
   font-size: 0.65rem;
